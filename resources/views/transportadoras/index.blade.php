@@ -15,7 +15,7 @@
         
     </x-slot>
 
-    <div class="container mx-auto p-10 mt-10 border bg-white rounded">
+    <div class="mt-10">
         <livewire:transportadoras.list-transportadoras />
     </div>
     

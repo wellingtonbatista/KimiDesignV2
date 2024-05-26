@@ -3,8 +3,9 @@
 use App\Http\Controllers\Transportadora;
 use App\Http\Controllers\Carregamento;
 use Illuminate\Support\Facades\Route;
+use Livewire\Volt\Volt;
 
-Route::view('/', 'welcome');
+Route::redirect('/', 'login');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -18,3 +19,6 @@ require __DIR__.'/auth.php';
 
 Route::resource('/transportadoras', Transportadora::class)->middleware('auth');
 Route::resource('/carregamentos', Carregamento::class)->middleware('auth');
+
+Volt::route('register', 'pages.auth.register')
+        ->name('register');
