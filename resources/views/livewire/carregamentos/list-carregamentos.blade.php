@@ -66,6 +66,7 @@
                     <td class="p-2 font-bold">Detalhes</td>
                     <td class="p-2 font-bold">Apagar</td>
                     <td class="p-2 font-bold">Status</td>
+                    <td class="p-2 font-bold">Imprimir</td>
                 </tr>
             </thead>
             <tbody class="text-center">
@@ -94,6 +95,12 @@
                             <button class="border px-2 py-0.5 rounded border-blue-700 text-blue-700 hover:text-white hover:bg-blue-700 duration-200" wire:click="{{ $carregamento->status == 'aberto' ? 'close' : 'open' }}({{$carregamento->id}})">
                                 <i class="{{ $carregamento->status == 'aberto' ? 'bi bi-check2-all' : 'bi bi-arrow-left' }}"></i>
                             </button>
+                        </td>
+
+                        <td>
+                            <a href="{{ route('print.carregamento', ['carregamento' => $carregamento->id]) }}" target="_blank">
+                                <button class="border py-0.5 px-2 rounded text-green-600 border-green-600 hover:bg-green-600 hover:text-white duration-200"><i class="bi bi-printer"></i></button>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

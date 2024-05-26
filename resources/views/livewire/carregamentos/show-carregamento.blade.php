@@ -2,10 +2,10 @@
     <form wire:submit="save">
         <div class="border p-10 bg-white">
             <div class="grid grid-cols-1">
-                <div class="grid">
+                <div class="grid col-span-1">
                     <input type="text" name="chave_nf" wire:model="chave_nf" class="w-full rounded border-green-500" placeholder="Chave Nota Fiscal">
                 </div>
-                <div class="grid mt-16">
+                <div class="grid mt-16 col-span-1">
                     <button class="border py-2 font-bold border-green-600 rounded text-green-600 hover:text-white hover:bg-green-600 duration-200" type="submit">Cadastrar</button>
                 </div>
                 @error('chave_nf')
